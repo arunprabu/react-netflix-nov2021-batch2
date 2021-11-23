@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+// node module imports
+import React from 'react'; // core lib
+import ReactDOM from 'react-dom'; // responsible for rendering the comp in DOM
+
+//custom imports
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css'; // custom css
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// App Comp is rendered in div element
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />, 
   document.getElementById('root')
 );
 
