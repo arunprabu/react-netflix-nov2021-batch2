@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LatestMovies = (props) => { // props will fetch the props from parent comp
+const LatestMovie = (props ) => { // props will fetch the props from parent comp
 
   console.log(props);
 
@@ -25,4 +25,4 @@ const LatestMovies = (props) => { // props will fetch the props from parent comp
   )
 }
 
-export default LatestMovies;
+export default LatestMovie;

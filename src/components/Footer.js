@@ -2,7 +2,6 @@
 import React from 'react';
 import Menu from './Menu';
 
-
 const Footer = function () {
   // ideal place to keep data within comp 
   const year = 2021; 
