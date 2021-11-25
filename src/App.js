@@ -1,12 +1,15 @@
 // This is the ideal place for us to have the layout
 // Functional Component 
-import './App.css';  // css
+import './App.css';  // css -> Comp-wide styles
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LatestMovie from './components/LatestMovie';
 import Movie from './containers/Movie';
 import TrendingShows from './containers/TrendingShows';
+import Subscription from './containers/Subscription';
+import MyProfile from './containers/MyProfile';
+import LifecycleDemo from './containers/LifecycleDemo';
 
 // JS 
 function App() {
@@ -36,7 +39,19 @@ function App() {
 
         <hr />
         <h2>Trending Shows | Class Comp, Conditional Rendering, Lists and Keys Demo</h2>
-        <TrendingShows />
+        <TrendingShows period="this week" />
+
+        <hr />
+        <h2 className="redText greenText">Subscription | Styling Demo</h2>
+        <Subscription />
+
+        <hr/>
+        <h2>My Profile | Two Way Binding Demo</h2>
+        <MyProfile />
+
+        <hr/>
+        <h2>Life Cycle Hooks Demo</h2>
+        <LifecycleDemo />
 
       </main>
 

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class TrendingShows extends Component {
 
-  constructor(){
-    super(); // call super to access this keyword
+  constructor(props){
+    super(props); // call super to access this keyword
     // keep state data here - when you have constructor you need to refer state as this.state 
     this.state = {
       showList: [
@@ -33,10 +33,12 @@ class TrendingShows extends Component {
         }
       ]
     }
+
+    console.log(this.props);
   }
 
   handleAddToFav(index){ // clicked show's index
-    console.log(index);
+    // console.log(index);
     // let's update the state data immutably
     let dupShowList = [ ...this.state.showList ];
     dupShowList[index].isInFav = !dupShowList[index].isInFav;
@@ -47,14 +49,15 @@ class TrendingShows extends Component {
   }
 
   render() {
-
+    console.log("Started Rendering");
+    // console.log(this.props);
     // DO NOT change states here
 
     let shows = null;
 
     // ideal place for looping thru
     shows = this.state.showList.map( (show, index) => {
-      console.log(show);
+      // console.log(show);
       return( 
         <div className="col-md-4" key={show.id}>
           <div className="card">
@@ -82,6 +85,7 @@ class TrendingShows extends Component {
 
     return (
       <div className="row">
+        <p>These are top shows trending {this.props.period}</p>
         { 
           this.state.showList && this.state.showList.length > 0? 
           shows

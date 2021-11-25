@@ -11,7 +11,7 @@ const Footer = function () {
       <hr />
       <Menu />
 
-      <p>Copyright { year } - Arun</p>
+      <p className="redText">Copyright { year } - Arun</p>
     </footer>
   )
 }

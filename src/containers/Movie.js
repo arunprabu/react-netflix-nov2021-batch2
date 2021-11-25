@@ -35,6 +35,8 @@ class Movie extends Component {
     // use setState() -- to change state -- will render the JSX again
     this.setState( {
       featureName: 'Events Demo'
+    }, () => {
+      console.log(this.state.featureName);
     });
   }
 
