@@ -22,7 +22,8 @@ class MyProfile extends Component {
         <p>First Name: {this.state.firstName}</p>
 
         {/* Two way Data Binding */}
-        <input type="text" value={this.state.firstName} onChange={this.handleFirstNameChange}/>
+        <input type="text" 
+          value={this.state.firstName} onChange={this.handleFirstNameChange}/>
       </div>
     )
   }

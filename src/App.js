@@ -10,11 +10,15 @@ import TrendingShows from './containers/TrendingShows';
 import Subscription from './containers/Subscription';
 import MyProfile from './containers/MyProfile';
 import LifecycleDemo from './containers/LifecycleDemo';
+import Signin from './containers/Signin';
+import WithLastLogin from './hoc/WithLastLogin';
+import SubscriberList from './containers/SubscriberList';
 
 // JS 
 function App() {
   // JSX 
   // Every comp in React should return JSX 
+
   return (
     <div>
       <Header></Header>
@@ -52,6 +56,25 @@ function App() {
         <hr/>
         <h2>Life Cycle Hooks Demo</h2>
         <LifecycleDemo />
+
+        <hr/>
+        <h2>Signin | Forms, Refs and DOM Demo</h2>
+        <Signin />
+
+        <hr/>
+        <h2>Last Login | Higher Order Component - HOC</h2>
+        <WithLastLogin>
+          <p>Last Login: 24/Nov/2021</p>
+          <p>Updated at: 6 PM Today</p>
+        </WithLastLogin>
+
+        <WithLastLogin>
+          <p>Do you want to signout?</p>
+        </WithLastLogin>
+
+        <hr />
+        <h2>Subscriber List | AJAX Call</h2>
+        <SubscriberList />
 
       </main>
 

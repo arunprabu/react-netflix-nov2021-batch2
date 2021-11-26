@@ -13,7 +13,10 @@ import reportWebVitals from './reportWebVitals';
 
 // App Comp is rendered in div element
 ReactDOM.render(
-  <App />, 
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  , 
   document.getElementById('root')
 );
 
